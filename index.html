@@ -1,67 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fun Facts Generator</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GenAI 101 Fun Facts Generator</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 50px;
-      background-color: #f0f8ff;
     }
 
-    .container {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      display: inline-block;
-      box-shadow: 0px 0px 10px gray;
+    h1 {
+      color: #333;
     }
 
     button {
-      margin-top: 20px;
       padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      background-color: #007BFF;
+      margin-top: 20px;
+      background-color: #4CAF50;
       color: white;
+      border: none;
       cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
     }
 
     button:hover {
-      background-color: #0056b3;
+      background-color: #45a049;
+    }
+
+    .fact-box {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #fff;
+      border-left: 5px solid #4CAF50;
+      max-width: 600px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Fun Facts about Oceans</h1>
-    <p id="fact">Click the button to see a fun fact!</p>
-    <button onclick="generateFact()">Generate Another Fun Fact</button>
-  </div>
+
+  <h1>🔍 Fun Facts Generator</h1>
+  <button onclick="generateFact()">Generate a Fun Fact</button>
+  <div class="fact-box" id="factBox">Click the button to discover a fun fact!</div>
 
   <script>
-    const facts = [
-    "Oceans cover more than 70% of the Earth's surface, making them the largest habitat on the planet.",
-    "The Mariana Trench, located in the Pacific Ocean, is the deepest part of the world's oceans, reaching depths of about 36,000 feet (10,973 meters).",
-    "Oceans are home to an estimated 230,000 known species, with millions more yet to be discovered, including unique creatures like the anglerfish and giant squid.",
-    "Phytoplankton, tiny marine plants, produce about 50% of the Earth's oxygen through photosynthesis, playing a crucial role in the planet's ecosystem.",
-    "Ocean currents, such as the Gulf Stream, are powerful flows of water that can influence climate and weather patterns across the globe.",
-    "The average salinity of ocean water is about 3.5%, meaning that there are approximately 35 grams of salt in every liter of seawater.",
-    "There are more active underwater volcanoes than there are on land, and they can create new islands when they erupt.",
-    "More than 80% of the ocean is unexplored and unmapped, making it one of the least understood areas of our planet.",
-    "Tsunamis are large ocean waves caused by underwater earthquakes or volcanic eruptions, and they can travel across entire ocean basins at speeds of up to 500 miles per hour (800 km/h).",
-    "Coral reefs, often referred to as the 'rainforests of the sea,' are some of the most diverse ecosystems on Earth, providing habitat for countless marine species."
-  ]
-
+    const funFacts = [
+      "Honey never spoils — archaeologists have found 3,000-year-old honey that's still edible!",
+      "Octopuses have three hearts and blue blood.",
+      "Bananas are berries, but strawberries aren't.",
+      "A day on Venus is longer than its year.",
+      "There’s enough DNA in the human body to stretch from the sun to Pluto — and back — 17 times.",
+      "Cows have best friends and get stressed when they are separated.",
+      "Sharks existed before trees.",
+      "Hot water freezes faster than cold water — it's called the Mpemba effect."
+    ];
 
     function generateFact() {
-      const fact = facts[Math.floor(Math.random() * facts.length)];
-      document.getElementById('fact').innerText = fact;
+      const index = Math.floor(Math.random() * funFacts.length);
+      document.getElementById('factBox').textContent = funFacts[index];
     }
   </script>
+
 </body>
 </html>
