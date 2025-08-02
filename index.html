@@ -4,68 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GenAI 101 Fun Facts Generator</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 50px;
-    }
-
-    h1 {
-      color: #333;
-    }
-
-    button {
-      padding: 10px 20px;
-      margin-top: 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      border-radius: 5px;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    .fact-box {
-      margin-top: 30px;
-      padding: 20px;
-      background-color: #fff;
-      border-left: 5px solid #4CAF50;
-      max-width: 600px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <h1>🔍 Fun Facts Generator</h1>
-  <button onclick="generateFact()">Generate a Fun Fact</button>
-  <div class="fact-box" id="factBox">Click the button to discover a fun fact!</div>
-
-  <script>
-    const funFacts = [
-      "Honey never spoils — archaeologists have found 3,000-year-old honey that's still edible!",
-      "Octopuses have three hearts and blue blood.",
-      "Bananas are berries, but strawberries aren't.",
-      "A day on Venus is longer than its year.",
-      "There’s enough DNA in the human body to stretch from the sun to Pluto — and back — 17 times.",
-      "Cows have best friends and get stressed when they are separated.",
-      "Sharks existed before trees.",
-      "Hot water freezes faster than cold water — it's called the Mpemba effect."
-    ];
-
-    function generateFact() {
-      const index = Math.floor(Math.random() * funFacts.length);
-      document.getElementById('factBox').textContent = funFacts[index];
-    }
-  </script>
-
+  <h1>Personal Fun Facts Generator</h1>
+  <button id="generate-btn">Generate a Fun Fact</button>
+  <div class="fact-box" id="factBox">Click the button to generate a fun fact!</div>
+  <script src="script.js"></script>
 </body>
 </html>
