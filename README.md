@@ -18,3 +18,8 @@ This app was designed as a capstone project for the GenAI 101 workshop, allowing
 ## Live Demo
 You can view a sample app hosted on GitHub Pages here: [https://ialimustufa.github.io/genai101-project/](https://ialimustufa.github.io/genai101-project/)  
 
+---
+
+## 🙌 Author
+
+Made with ❤️ by **Varshini**
